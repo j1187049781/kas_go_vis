@@ -10,6 +10,8 @@ type GrpcClient interface{
 type Address struct {
 	Address string 
 	Balance float64
+
+	Tags []AddrTag
 }
 
 type AddrTag struct {

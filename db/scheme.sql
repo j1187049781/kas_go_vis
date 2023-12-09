@@ -1,5 +1,6 @@
 create table if not exists addr
-(	`time` DateTime NOT NULL comment 'time',
+(	`UUID` VARCHAR(255) not null comment 'UUID' primary key, 
+    `time` DateTime NOT NULL comment 'time',
      `address` VARCHAR(255) not null comment 'address',
      `balance` DECIMAL(12,9) default '0.0'  comment 'balance'
 )
@@ -56,7 +57,7 @@ PROPERTIES (
 
 
 create table if not exists addr_tag
-(
+(    `UUID` VARCHAR(255) not null comment 'UUID' primary key, 
      `address` VARCHAR(255) not null comment 'address',
      `name` DECIMAL(12,9) default '0.0'  comment 'name',
      `link` string  null comment 'link'

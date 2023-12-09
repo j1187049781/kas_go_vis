@@ -51,9 +51,18 @@ func (c *DefaultClient) GetRichTopList() ([]Address, error) {
 		}
 		b_norm := b/100_000_000
 
+
+		var addrTags []AddrTag
+		for _, richTag := range richAddr.Tags{
+			t := AddrTag(richTag)
+
+			addrTags = append(addrTags, t)
+		}
+
 		addresses = append(addresses, Address{
 			Address: addr,
 			Balance: b_norm,
+			Tags: addrTags,
 		})
 	}
 
