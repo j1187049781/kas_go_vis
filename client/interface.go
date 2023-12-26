@@ -3,8 +3,8 @@ package client
 
 
 type GrpcClient interface{
-	getRichTopList() ([]Address, error)
-	getAddrTag() ([]AddrTag, error)
+	GetRichTopList() ([]Address, error)
+	GetAddrTag() ([]AddrTag, error)
 }
 
 type Address struct {
