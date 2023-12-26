@@ -12,7 +12,7 @@ func TestDal(t *testing.T) {
 	db := dal.ConnectDB(dal.MySQLDSN)
 	err := db.AutoMigrate(&models.AddrBalance{}, &models.AddrTag{})
 	if err != nil {
-		t.Log(err)
+		t.Log(err) 
 		t.Fail()
 	}
 
